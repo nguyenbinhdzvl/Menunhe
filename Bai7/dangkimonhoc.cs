@@ -29,10 +29,19 @@ namespace Bai7
             thongtin += "\nHỌ Và Tên: "+ textBox2.Text;
             thongtin += "\nNiên KHóa: "+ comboBox1.Text;
             thongtin += "\nLỚp: "+ comboBox2.Text;
-            thongtin += "\nHọc KÌ:  "+ radioButton1.Text+ radioButton2.Text+  radioButton3.Text+ radioButton4.Text;
-            thongtin += "\nMÔn học "+ checkedListBox1;
+          foreach (var item in checkedListBox2.CheckedItems)
+{
+    thongtin += "\nHoc Ky " + item.ToString();
+}
           
-            MessageBox.Show(thongtin,"Chú Ý");
+foreach (var item in checkedListBox1.CheckedItems)
+{
+    thongtin += "\nMon Hoc " + item.ToString();
+}
+
+
+MessageBox.Show(thongtin, thongtin1, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
